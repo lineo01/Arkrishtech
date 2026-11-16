@@ -125,6 +125,7 @@ def latest(fid: int): return db.latest_reading(fid) or {}
 
 @app.post("/api/chat")
 def chat(c: Chat): return kb.search(c.question[:300])
+_PUBLIC = Path(__file__).resolve().parents[2] / "public"
 
-_FRONT = Path(__file__).resolve().parents[2]/"frontend"
-if _FRONT.exists(): app.mount("/", StaticFiles(directory=str(_FRONT), html=True), name="web")
+if _PUBLIC.is_dir():
+    app.mount("/", StaticFiles(directory=str(_PUBLIC), html=True), name="web")
