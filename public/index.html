@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arkrishitech · Farm Intelligence</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="192x192" href="assets/favicon-192.png">
+<meta name="theme-color" content="#243010">
+<meta name="description" content="Arkrishitech — farm decisions grounded in climate data, field sensors and farming wisdom.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<header><div class="brand-lockup"><img src="assets/arkrishitech-logo.jpg" alt="Arkrishitech — Grounded in Data. Rooted in Wisdom." class="brand-logo"><div class="brand-copy"><span class="eyebrow">FARM INTELLIGENCE PLATFORM</span><div class="brand-tagline">Grounded in Data. Rooted in Wisdom.</div></div></div><div class="header-context"><span class="status-pip"></span><span id="area">Draw your field on the map</span></div></header>
+<div id="wx"><div class="chip">Draw your field to load weather</div></div>
+<div id="nav" role="tablist" aria-label="Main sections"><button data-s="farm" class="sel" role="tab" aria-selected="true"><img class="ui-icon" src="https://img.icons8.com/ios/50/243010/home.png" alt=""/> My Farm</button><button data-s="cmp" role="tab" aria-selected="false"><img class="ui-icon" src="https://img.icons8.com/ios/50/243010/calculator.png" alt=""/> Calculate &amp; Simulate</button><button data-s="assistant" role="tab" aria-selected="false"><img class="ui-icon" src="https://img.icons8.com/ios/50/243010/chat.png" alt=""/> AI Assistant</button></div>
+<div id="busy" hidden>Crunching 30 years of weather… (first time can take a minute)</div><div id="err" hidden></div>
+<main id="farm" class="screen farm-layout">
+ <div class="farm-top">
+  <section class="farm-map-column">
+   <div class="card map-card"><h2>Map your farm</h2><div id="map"></div><div class="hint">Outline your field using the drawing tools. <button class="alt" id="loc"><img class="ui-icon" src="https://img.icons8.com/ios/50/243010/marker.png" alt=""/> My location</button></div></div>
+  </section>
+  <section class="farm-overview-column">
+   <div class="card sensor-panel"><h2><img class="heading-icon" src="https://img.icons8.com/ios/50/243010/sensor.png" alt=""/> Field sensors</h2><div id="sens"></div></div>
+   <div class="card alerts-card"><h2><img class="heading-icon" src="https://img.icons8.com/ios/50/243010/error--v1.png" alt=""/> Field alerts</h2><div id="alerts"><div class="alert ok">Draw your field to see relevant alerts.</div></div></div>
+  </section>
+ </div>
+ <div class="farm-bottom">
+  <section class="card crops-card"><h2>Best crops for this farm <small>· select a crop</small></h2><div id="crops">Draw your field to see the best crops.</div></section>
+  <section class="card calendar-card"><h2>Farm calendar &amp; crop status</h2><div id="cal">Draw a field to see the plan.</div></section>
+ </div>
+</main>
+<section id="assistant" class="screen assistant-screen" hidden>
+ <div class="assistant-heading"><div class="assistant-mark"><img src="assets/arkrishitech-logo.jpg" alt=""/></div><div><div class="eyebrow">ARKRISHITECH KNOWLEDGE ASSISTANT</div><h1>Ask your farm anything.</h1><p>Practical guidance grounded in the indigenous knowledge library.</p></div></div>
+ <div class="assistant-content">  <div class="card"><h2><img class="heading-icon" src="https://img.icons8.com/ios/50/243010/plant-under-sun.png" alt=""/> Indigenous Knowledge Assistant <small>(retrieval-grounded farm guidance)</small></h2>
+   <div class="voice-toolbar"><label for="voiceLang">Speaking language</label><select id="voiceLang" aria-label="Speaking language"><option value="ne-NP">नेपाली (Nepali)</option><option value="en-US">English</option><option value="hi-IN">हिन्दी (Hindi)</option></select><span id="voiceStatus" aria-live="polite">Voice assistant ready</span></div>
+   <div id="chatlog"><div class="m">Namaste! You can type or tap the microphone and speak. Ask about compost, seed treatment, pests, drought, crop rotation or soil care. Answers are retrieved from the knowledge library and show their source.</div></div>
+   <div id="chatf"><input id="q" placeholder="Ask or speak a farming question…"><button id="mic" class="alt" type="button" title="Speak your question" aria-label="Speak your question"><img class="ui-icon" src="https://img.icons8.com/ios/50/243010/microphone.png" alt=""/> Speak</button><button id="ask" type="button">Ask</button></div>
+   <div class="voice-footer"><label><input type="checkbox" id="voiceReplies" checked> Read answers aloud</label><button id="stopVoice" class="alt" type="button">Stop audio</button><small>Voice input requires a supported browser and microphone permission. You can always type instead.</small></div></div></div>
+</section>
+<section id="cmp" class="screen" hidden>
+ <div class="cmp-layout">
+  <aside class="cmp-side" aria-label="Farm inputs">
+   <div class="card"><h2>Auto-detected</h2><div class="kv" id="auto"></div></div>
+   <div class="card"><h2>What you have</h2><div class="taps" id="taps"></div></div>
+  </aside>
+  <div class="cmp-main">
+   <div class="card" id="compare">
+    <div class="card-head"><h2>Crop comparison</h2><span class="card-note">Select a crop column to update its simulation</span></div>
+    <div class="empty-state" id="cmpEmpty" hidden><b>No field drawn yet</b><p>Draw your field on My Farm and the crops will be compared using your field, weather and sensor readings.</p><button class="alt" type="button" id="toFarm">Go to My Farm</button></div>
+    <div class="scroll" id="tblWrap"><table id="tbl"></table></div>
+    <div id="verdict"></div>
+    <p class="foot">Prices, yields and costs are starter estimates and need local verification.</p>
+   </div>
+   <div class="card" id="simulation">
+    <div class="card-head"><h2>What-if simulation</h2><button id="runSim" type="button">Recalculate</button></div>
+    <div id="simIntro"></div>
+    <h3 id="wit"></h3>
+    <div id="wi"></div>
+   </div>
+  </div>
+ </div>
+</section>
+<footer class="app-footer"><span>© Arkrishitech · Farm decision support</span><span><a href="https://icons8.com/icons/set/favicon" target="_blank" rel="noopener noreferrer">Icons8 favicon library</a></span></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/map.js"></script><script src="js/screens.js"></script><script src="js/main.js"></script>
+</body></html>
