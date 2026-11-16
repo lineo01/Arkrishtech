@@ -1,0 +1,207 @@
+[
+ {
+  "id": "jeevamrit",
+  "title": "Jeevamrit (Jholmal): fermented liquid plant food",
+  "keywords": [
+   "fertilizer",
+   "fertiliser",
+   "manure",
+   "nutrient",
+   "urea",
+   "natural",
+   "jeevamrit",
+   "jholmal",
+   "feed",
+   "chemical"
+  ],
+  "text": "Mix 10 kg cow dung, 10 litres cow urine, 2 kg jaggery, 2 kg pulse flour (gram or lentil) and a handful of soil from your field in 200 litres of water. Cover with cloth, keep in shade, stir twice a day for 5 to 7 days. Apply 200 litres per acre with irrigation or as a spray, about every 2 weeks.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "beejamrit",
+  "title": "Beejamrit: natural seed treatment",
+  "keywords": [
+   "seed",
+   "seeds",
+   "beej",
+   "beejamrit",
+   "treat",
+   "treatment",
+   "sowing",
+   "germination"
+  ],
+  "text": "Mix 5 kg cow dung, 5 litres cow urine, 50 g lime and a handful of soil in 20 litres of water. Leave overnight. Coat the seeds, dry them in shade, and sow the same day. It helps protect seedlings from soil fungus.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "neem",
+  "title": "Neem leaf spray for insects",
+  "keywords": [
+   "pest",
+   "pests",
+   "insect",
+   "insects",
+   "aphid",
+   "aphids",
+   "worm",
+   "worms",
+   "caterpillar",
+   "neem",
+   "bug",
+   "bugs"
+  ],
+  "text": "Crush 5 kg fresh neem leaves (or seeds) and soak in 20 litres of water overnight. Strain, add a spoon of soap so it sticks, and spray in the evening. Repeat after 7 days if needed. Also plant marigold borders and a mustard trap crop, and encourage birds.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "buttermilk",
+  "title": "Sour buttermilk spray for fungus",
+  "keywords": [
+   "fungus",
+   "fungal",
+   "mildew",
+   "blight",
+   "disease",
+   "diseases",
+   "rot",
+   "spots"
+  ],
+  "text": "Mix 1 litre of 3-day-old sour buttermilk in 10 litres of water and spray on leaves in the evening. Give plants space, avoid watering leaves at night, and remove sick leaves. Rotate crops next season.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "mulch",
+  "title": "Mulching and surviving dry spells",
+  "keywords": [
+   "drought",
+   "dry",
+   "water",
+   "moisture",
+   "mulch",
+   "mulching",
+   "irrigation",
+   "irrigate",
+   "thirsty"
+  ],
+  "text": "Cover the soil with 5 to 10 cm of straw, dry leaves or crop residue. This keeps soil cool and holds water. Dig half-moon trenches or small ponds on slopes to catch rain, water early in the morning, and add compost to help soil hold water. Millets and buckwheat survive dry spells better than rice or maize.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "rotation",
+  "title": "Crop rotation and mixed cropping",
+  "keywords": [
+   "rotation",
+   "rotate",
+   "monoculture",
+   "repeat",
+   "same",
+   "mixed",
+   "intercrop",
+   "intercropping",
+   "companion",
+   "three",
+   "sisters"
+  ],
+  "text": "Follow a cereal with a legume (lentil, beans, black gram), then a vegetable or root crop, then a green manure. Mix crops: maize with beans and pumpkin, or millet with black gram. Different roots and leaves confuse pests and rest the soil.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "acid",
+  "title": "Fixing acidic soil naturally",
+  "keywords": [
+   "acid",
+   "acidic",
+   "ph",
+   "lime",
+   "ash",
+   "sour",
+   "soil"
+  ],
+  "text": "If soil pH is below 5.5, spread wood ash or agricultural lime and mix in compost before sowing. Re-test after one season. For alkaline soil, add more compost and green manure instead.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "compost",
+  "title": "Making compost",
+  "keywords": [
+   "compost",
+   "composting",
+   "pit",
+   "vermicompost",
+   "residue",
+   "waste",
+   "organic"
+  ],
+  "text": "Pile crop residue, kitchen waste, leaves and cow dung in layers, keep it damp, turn it every 2 weeks, and cover it. It is ready in 2 to 3 months when dark and crumbly. Never burn crop residue: it feeds the soil.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "greenmanure",
+  "title": "Green manure to rebuild soil",
+  "keywords": [
+   "green",
+   "manure",
+   "sunhemp",
+   "dhaincha",
+   "cover",
+   "cowpea",
+   "legume",
+   "legumes",
+   "nitrogen"
+  ],
+  "text": "Grow sunhemp, dhaincha or cowpea, and plough it into the soil at flowering, about 6 to 8 weeks after sowing. Legumes add nitrogen, so you need less bought fertilizer.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ },
+ {
+  "id": "weeds",
+  "title": "Weed control without chemicals",
+  "keywords": [
+   "weed",
+   "weeds",
+   "weeding",
+   "grass"
+  ],
+  "text": "Mulch to smother weeds, plant crops densely, and hand-weed twice, around 25 and 45 days after sowing, while weeds are small. Cover crops such as buckwheat shade out weeds.",
+  "source": "Community natural-farming practice (widely documented in South Asia)",
+  "contributor": "",
+  "consent": false,
+  "verified_by": "PENDING: needs review by a local agronomist or elder",
+  "language": "en"
+ }
+]

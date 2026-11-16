@@ -1,0 +1,17 @@
+# Auto-start on the UNO Q (Debian). Edit User and paths, then:
+#   sudo cp deploy/krishi.service /etc/systemd/system/krishi.service
+#   sudo systemctl daemon-reload && sudo systemctl enable --now krishi
+[Unit]
+Description=Krishi Saathi
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=arduino
+WorkingDirectory=/home/arduino/krishi-saathi/backend
+ExecStart=/home/arduino/krishi-saathi/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
